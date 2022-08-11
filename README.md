@@ -1,24 +1,33 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ruby Blog App
 
-Things you may want to cover:
+> Simple Rails Blog App
 
-* Ruby version
+## Made With
 
-* System dependencies
+- Ruby on Rails (RoR)
 
-* Configuration
+### Setup
 
-* Database creation
+To setup the project locally: clone the repository using:
 
-* Database initialization
+```
+git clone https://github.com/ichala/Ruby-Blog-App.git
+```
 
-* How to run the test suite
+## Authors
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Ali Jendoubi**
 
-* Deployment instructions
+- GitHub: [@iChala](https://github.com/ichala/)
+- LinkedIn: [@alijendoubi](https://www.linkedin.com/in/alijendoubi/)
+## 🤝 Contributing
 
-* ...
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
