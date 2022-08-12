@@ -5,7 +5,7 @@ RSpec.describe Post, type: :model do
 
   subject do
     Post.new(author: user, title: 'web dev best practices', text: 'this is where the post text goes',
-    commentsCounter: 0, likesCounter: 0)
+             commentsCounter: 0, likesCounter: 0)
   end
 
   before { subject.save }
