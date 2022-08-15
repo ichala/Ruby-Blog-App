@@ -1,1 +1,25 @@
-HERE A SINGLE POST
+ <div class="users-list">
+ <div class="single-post"> 
+ Post: <%= @post.title %> Created by <%= @post.author.name %> | comments:<% if @post.commentsCounter.to_i > 0 %>
+  <%= @post.commentsCounter %>
+<% else %>
+  0
+<% end %>
+, likes :<% if @post.likesCounter.to_i > 0 %>
+  <%= @post.likesCounter %>
+<% else %>
+  0
+<% end %> <br><br>
+<%= @post.text %> <br>
+
+</div>
+<div class="single-post">
+<h3>
+Comments
+</h3>
+<% @post.all_comments.each do |comment|%>
+
+<%= comment.author.name %>: <%= comment.text %> <br>
+
+<% end %></div>
+ </div>
