@@ -1,12 +1,7 @@
 .users-list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.users-list {
-  display: flex;
   flex-direction: column;
   gap: 20px;
 }
@@ -15,7 +10,6 @@
   float: right;
   align-self: flex-end;
   justify-self: right;
-  align-self: flex-end;
 }
 
 .user-image {
