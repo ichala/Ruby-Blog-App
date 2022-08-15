@@ -1,13 +1,9 @@
 class UsersController < ApplicationController
-  def index
-  end
+  def index; end
 
-  def posts
-  end
+  def posts; end
 
-  def user
-  end
+  def user; end
 
-  def post
-  end
+  def post; end
 end
