@@ -23,3 +23,18 @@ Comments
 
 <% end %></div>
  </div>
+
+  <div class="users-list">
+ <div class="single-post"><center><h1>Add comment as <%= @user.name %></h1></center>
+<%= form_with url: "/addcomment/#{@post.id}" do |form| %>
+  <%=  form.text_field :comment , placeholder: "Comment" %>
+  <%= form.submit "Save" %>
+<% end %>
+ </div>
+  </div>
+
+    <div class="users-list">
+ <div class="single-post"><center><h1>Click Heart Below To Add Like<br>
+ <a href="/addlike/<%= @post.id %>"><%= image_tag '/assets/heart.png', :style => "height:60px;width:60px;"%></center></a>
+ </div>
+  </div>

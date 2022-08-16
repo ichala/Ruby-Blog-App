@@ -1,0 +1,9 @@
+ <div class="users-list">
+ <div class="single-post"><center><h1>Hello <%= @user.name %></h1><br><h3>Add New Post</h3></center>
+<%= form_with model: @post do |form| %>
+  <%=  form.text_field :title , placeholder: "title" %>
+  <%= form.text_field :text , placeholder: "text"%>
+  <%= form.submit "Save" %>
+<% end %>
+ </div>
+  </div>
