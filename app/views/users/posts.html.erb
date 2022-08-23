@@ -2,7 +2,7 @@
  <div class="single-user">
 <div class="user-image"></div>
 <div class="user-data">
-<div class="user-username"><%= @user.name %></div>
+<div class="user-username">username : <%= @user.name %></div>
 <div class="user-posts">number of posts: 
 <% if @user.postsCounter.to_i > 0 %>
   <%= @user.postsCounter %>
@@ -13,13 +13,13 @@
 </div>
 
 </div>
-<% @user.recent_posts.each do |post| %>
+<% @posts.each do |post| %>
   <a href='/users/<%= @user.id %>/posts/<%= post.id %>' class='user-link'><div class="single-post">
 <h3>
-Post #<%= @user.all_posts.index(post)+1 %>
+Post #<%= @user.all_posts.index(post)+1 %> : <%= post.title %>
 </h3>
 <p><%= post.text %></p>
-<p style="socials">comments:<% if post.commentsCounter.to_i > 0 %>
+<p style="socials">comments: <% if post.commentsCounter.to_i > 0 %>
   <%= post.commentsCounter %>
 <% else %>
   0
