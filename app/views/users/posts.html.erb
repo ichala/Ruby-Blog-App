@@ -2,7 +2,7 @@
  <div class="single-user">
 <div class="user-image"></div>
 <div class="user-data">
-<div class="user-username"><%= @user.name %></div>
+<div class="user-username">username : <%= @user.name %></div>
 <div class="user-posts">number of posts: 
 <% if @user.postsCounter.to_i > 0 %>
   <%= @user.postsCounter %>

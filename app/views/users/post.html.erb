@@ -17,7 +17,7 @@
 <h3>
 Comments
 </h3>
-<% @post.all_comments.each do |comment|%>
+<% @post.all_comments.includes(:omments).each do |comment|%>
 
 <%= comment.author.name %>: <%= comment.text %> <br>
 
