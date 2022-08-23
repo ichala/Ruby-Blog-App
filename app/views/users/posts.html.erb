@@ -16,7 +16,7 @@
 <% @posts.each do |post| %>
   <a href='/users/<%= @user.id %>/posts/<%= post.id %>' class='user-link'><div class="single-post">
 <h3>
-Post #<%= @user.all_posts.index(post)+1 %>
+Post #<%= @user.all_posts.index(post)+1 %> : <%= post.title %>
 </h3>
 <p><%= post.text %></p>
 <p style="socials">comments: <% if post.commentsCounter.to_i > 0 %>
