@@ -19,7 +19,7 @@
 Post #<%= @user.all_posts.index(post)+1 %>
 </h3>
 <p><%= post.text %></p>
-<p style="socials">comments:<% if post.commentsCounter.to_i > 0 %>
+<p style="socials">comments: <% if post.commentsCounter.to_i > 0 %>
   <%= post.commentsCounter %>
 <% else %>
   0
