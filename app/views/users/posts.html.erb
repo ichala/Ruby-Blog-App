@@ -13,7 +13,7 @@
 </div>
 
 </div>
-<% @user.recent_posts.each do |post| %>
+<% @user.posts.includes(:comments).each do |post| %>
   <a href='/users/<%= @user.id %>/posts/<%= post.id %>' class='user-link'><div class="single-post">
 <h3>
 Post #<%= @user.all_posts.index(post)+1 %>
