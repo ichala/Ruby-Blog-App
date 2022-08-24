@@ -47,6 +47,20 @@ a {
   border: 2px black solid;
 }
 
+.input-data {
+  padding: 10px;
+  border: 2px black solid;
+  margin-top: 10px;
+}
+
+.log-in {
+  margin-top: 10px;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+  border: 2px black solid;
+}
+
 .user-link:hover {
   text-decoration: none;
   color: black !important;

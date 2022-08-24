@@ -4,5 +4,6 @@ class AddColumnsToUser < ActiveRecord::Migration[7.0]
     add_column :users, :photo, :string
     add_column :users, :bio, :text
     add_column :users, :postsCounter, :integer
+    add_column :users, :confirmation_token, :text
   end
 end

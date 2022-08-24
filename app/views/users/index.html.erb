@@ -1,4 +1,4 @@
-<div class="users-list">
+<div class="users-list"> 
 <a href='/new' class='view-all'>Add Post</a>
 <% @users.includes(:posts).each do |user| %>
   <a href='/users/<%= user.id %>' class='user-link'>
