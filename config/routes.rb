@@ -1,18 +1,15 @@
+# config/routes.rb
 Rails.application.routes.draw do
-  devise_for :users
-  devise_scope :user do
-    get 'sign_up', to: 'devise/registrations#new'
+  
+  namespace :api do
+    namespace :v1 do
+    #Create an API endpoint to list all posts for a user.
+    get '/user/:user_id/posts', to: 'posts#all'
+    #Create an API endpoint to list all comments for a user's post.
+    get '/posts/:post_id/comments', to: 'posts#allcoments'
+    #Create an API endpoint to add a comment to a post by the current user
+    end
   end
-  get 'users/index'
-  get '/users', to: "users#index"
-  get '/users/:id/', to: "users#user"
-  get '/users/:id/posts', to: "users#posts"
-  get '/new', to: "users#new_post"
-  post '/new', to: "users#save_post"
-  post '/addcomment/:id', to: "users#addcomment"
-  get 'addlike/:id', to: "users#addlike"
-  get '/users/:id/posts/:id', to: "users#post"
-  root 'users#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  get '/*a', to: 'application#not_found'
+  post '/*a', to: 'application#not_found'
 end

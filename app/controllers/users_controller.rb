@@ -24,14 +24,6 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
-  # PUT /users/{username}
-  def update
-    unless @user.update(user_params)
-      render json: { errors: @user.errors.full_messages },
-             status: :unprocessable_entity
-    end
-  end
-
   # DELETE /users/{username}
   def destroy
     @user.destroy
@@ -41,8 +33,8 @@ class Api::V1::UsersController < ApplicationController
 
   def find_user
     @user = User.find_by_username!(params[:_username])
-    rescue ActiveRecord::RecordNotFound
-      render json: { errors: 'User not found' }, status: :not_found
+  rescue ActiveRecord::RecordNotFound
+    render json: { errors: 'User not found' }, status: :not_found
   end
 
   def user_params
