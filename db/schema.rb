@@ -53,7 +53,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_23_123916) do
     t.integer "postsCounter"
     t.text "confirmation_token"
     t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
+    t.string "password_digest", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
